@@ -125,47 +125,6 @@ function get_user_name($user_id, $pdo)
 	}
 }
 
-function count_unseen_message($from_user_id, $to_user_id, $pdo)
-{
-	$query = "
-	SELECT * FROM chat_message 
-	WHERE from_user_id = '$from_user_id' 
-	AND to_user_id = '$to_user_id' 
-	AND status = '1'
-	";
-	$statement = $pdo->prepare($query);
-	$statement->execute();
-	$count = $statement->rowCount();
-	$output = '';
-	if($count > 0)
-	{
-		$output = '<span class="label label-success">'.$count.'</span>';
-	}
-	return $output;
-}
-
-function fetch_is_type_status($user_id, $pdo)
-{
-	$query = "
-	SELECT is_type FROM login_details 
-	WHERE user_id = '".$user_id."' 
-	ORDER BY last_activity DESC 
-	LIMIT 1
-	";	
-	$statement = $pdo->prepare($query);
-	$statement->execute();
-	$result = $statement->fetchAll();
-	$output = '';
-	foreach($result as $row)
-	{
-		if($row["is_type"] == 'yes')
-		{
-			$output = ' - <small><em><span class="text-muted">Typing...</span></em></small>';
-		}
-	}
-	return $output;
-}
-
 function fetch_group_chat_history($pdo)
 {
 	$query = "

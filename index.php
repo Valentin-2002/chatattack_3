@@ -43,11 +43,12 @@ if(isset($_SESSION['role'])) {
 				<div class="col-md-8 col-sm-6">
 					<h4>Online User</h4>
 				</div>
-				<div class="col-md-2 col-sm-3">
+				<div class="col-md-0 col-sm-6">
 					<input type="hidden" id="is_active_group_chat_window" value="no" />
-					<button type="button" name="group_chat" id="group_chat" class="btn btn-warning btn-xs">Group Chat</button>
+					<button type="button" name="group_chat" id="group_chat" class="btn btn-warning btn-xs">Global Chat</button>
 				</div>
 			</div>
+			<br>
 			<div class="table-responsive">
 				
 				<div id="user_details"></div>
