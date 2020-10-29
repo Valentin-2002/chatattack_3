@@ -18,9 +18,8 @@ if(isset($_SESSION['role'])) {
 
 if(isset($_POST["id"]) && !empty($_POST["id"])){
     $id = $_POST["id"];
-    echo('ID: ' . $id);
     $username = $_POST['username'];
-    $credential = $_POST['credential'];
+    $credential = sha1($_POST['credential']);
     $role = $_POST['role'];
     
     $sql = "UPDATE user SET username=:username, credential=:credential, role=:role WHERE id=:id";
@@ -61,7 +60,6 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
                     $row = $stmt->fetch(PDO::FETCH_ASSOC);
                     
                     $username = $row["username"];
-                    $credential = $row["credential"];
                     $role = $row["role"];
                 } else{
                     exit();
@@ -111,7 +109,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
                         </div>
                         <div class="form-group>">
                             <label>Credential</label>
-                            <input type="password" name="credential" class="form-control" value="<?= $credential ?>"></input>
+                            <input type="password" name="credential" class="form-control" placeholder="New Credential"></input>
                         </div>
                         <div class="form-group">
                         <label for="cars">Role</label>

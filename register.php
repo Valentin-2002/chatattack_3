@@ -13,6 +13,7 @@ if(isset($_SESSION['id']))
 
 if(isset($_POST["register"]))
 {
+
 	$username = trim($_POST["username"]);
 	$password = trim($_POST['credential']);
 	$check_query = "
@@ -41,7 +42,7 @@ if(isset($_POST["register"]))
 			}
 			else
 			{
-				if($password != $_POST['confirm_password'])
+				if($password != $_POST['confirm_credential'])
 				{
 					$message .= '<p><label>Password not match</label></p>';
 				}
@@ -50,13 +51,13 @@ if(isset($_POST["register"]))
 			{
 				$data = array(
 					':username'		=>	$username,
-					':password'		=>	password_hash($password, PASSWORD_DEFAULT)
+					':credential'		=>	sha1($password)
 				);
 
 				$query = "
 				INSERT INTO user 
-				(username, password) 
-				VALUES (:username, :password)
+				(username, credential) 
+				VALUES (:username, :credential)
 				";
 				$statement = $pdo->prepare($query);
 				if($statement->execute($data))
@@ -95,11 +96,11 @@ if(isset($_POST["register"]))
 						</div>
 						<div class="form-group">
 							<label>Enter Password</label>
-							<input type="password" name="password" class="form-control" />
+							<input type="password" name="credential" class="form-control" />
 						</div>
 						<div class="form-group">
 							<label>Re-enter Password</label>
-							<input type="password" name="confirm_password" class="form-control" />
+							<input type="password" name="confirm_credential" class="form-control" />
 						</div>
 						<div class="form-group">
 							<input type="submit" name="register" class="btn btn-info" value="Register" />

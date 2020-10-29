@@ -29,20 +29,11 @@ if(isset($_POST['login']))
 		$result = $statement->fetchAll();
 		foreach($result as $row)
 		{
-			if($_POST['credential'] == $row['credential'])
+			if(sha1($_POST['credential']) == $row['credential'])
 			{
 				$_SESSION['id'] = $row['id'];
 				$_SESSION['username'] = $row['username'];
 				$_SESSION['role'] = $row['role'];
-
-				/*$sub_query = "
-				INSERT INTO login_details 
-	     		(user_id) 
-	     		VALUES ('".$row['id']."')
-				";
-				$statement = $pdo->prepare($sub_query);
-				$statement->execute();
-				$_SESSION['login_details_id'] = $pdo->lastInsertId();*/
 
 				header('location:index.php');
 			}

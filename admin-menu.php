@@ -68,7 +68,6 @@
                                     echo "<tr>";
                                         echo "<th>#</th>";
                                         echo "<th>Username</th>";
-                                        echo "<th>Credential</th>";
                                         echo "<th>Role</th>";
                                         echo '<th>Last Activity
 
@@ -94,7 +93,6 @@
                                     echo "<tr>";
                                         echo "<td>" . $row['id'] . "</td>";
                                         echo "<td>" . $row['username'] . "</td>";
-                                        echo "<td>" . $row['credential'] . "</td>";
                                         echo "<td>" . ($row['role'] == 1 ? 'Admin' : 'Default') . "</td>";
                                         echo "<td>" . $row['last_activity'] . "</td>";
                                         echo "<td>";

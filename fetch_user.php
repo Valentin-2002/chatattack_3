@@ -6,10 +6,7 @@ include('db-connection.php');
 
 session_start();
 
-$query = "
-SELECT * FROM user 
-WHERE id != '".$_SESSION['id']."' AND id != 0 
-";
+$query = "SELECT * FROM user WHERE id != '".$_SESSION['id']."' AND id != 0";
 
 $statement = $pdo->prepare($query);
 
