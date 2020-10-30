@@ -7,7 +7,7 @@ session_start();
 $data = array(
 	':from_user'		=>	$_SESSION["id"],
 	'to_user'			=> $_POST['to_user_id'],
-	':msg'		=>	$_POST['chat_message'],
+	':msg'		=>	htmlspecialchars($_POST['chat_message']),
 	':status'			=>	'1'
 );
 

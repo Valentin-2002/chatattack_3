@@ -19,8 +19,8 @@ require_once "db-connection.php";
  
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-    $username = $_POST['username'];
-    $credential = $_POST['credential'];
+    $username = htmlspecialchars($_POST['username']);
+    $credential = sha1($_POST['credential']);
     $role = $_POST['role'];
 
     $sql = "INSERT INTO user (username, credential, role) VALUES (:username, :credential, :role)";

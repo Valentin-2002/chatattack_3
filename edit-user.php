@@ -18,7 +18,7 @@ if(isset($_SESSION['role'])) {
 
 if(isset($_POST["id"]) && !empty($_POST["id"])){
     $id = $_POST["id"];
-    $username = $_POST['username'];
+    $username = htmlspecialchars($_POST['username']);
     $credential = sha1($_POST['credential']);
     $role = $_POST['role'];
     
