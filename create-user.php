@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="style.css">
+
 <?php
 
 session_start();
@@ -15,13 +17,20 @@ if(isset($_SESSION['role'])) {
 	}
 }
 
+
 require_once "db-connection.php";
  
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $username = htmlspecialchars($_POST['username']);
-    $credential = sha1($_POST['credential']);
+    $credential = $_POST['credential'];
     $role = $_POST['role'];
+    
+    if(empty($username)) {
+        echo('<b style="color: red">Please enter a Username</b>');
+    } 
+
+    $credential = sha1($credential);
 
     $sql = "INSERT INTO user (username, credential, role) VALUES (:username, :credential, :role)";
 
@@ -40,11 +49,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         } else{
             echo "Something went wrong. Please try again later.";
         }
-    }
-     
+    } 
+    
+    if(strlen($credential) < 8) {
+        echo('<b style="color: red">Please use a password with at least 8 characters</b>');
+    } 
+    
     unset($stmt);
     
-    unset($pdo);
+    unset($pdo);    
+
 }
 ?>
  
@@ -53,13 +67,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Create Record</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-    <style type="text/css">
-        .wrapper{
-            width: 500px;
-            margin: 0 auto;
-        }
-    </style>
 </head>
 <body>
     <div class="wrapper">

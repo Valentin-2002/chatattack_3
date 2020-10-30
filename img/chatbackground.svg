@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+]>
+<svg version="1.0" id="Layer_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="1400px" height="980px" viewBox="0 0 1400 980" enable-background="new 0 0 1400 980" xml:space="preserve"
+	>
+<metadata>
+	<sfw  xmlns="&ns_sfw;">
+		<slices></slices>
+		<sliceSourceBounds  width="1401" height="981" x="-0.5" y="-980.5" bottomLeftOrigin="true"></sliceSourceBounds>
+	</sfw>
+</metadata>
+<g>
+	<rect fill="#636466" stroke="#231F20" stroke-miterlimit="10" width="1400" height="980"/>
+	<polygon fill="#808285" points="0,629.3 303,519.3 0,980 	"/>
+	<polygon fill="#77787B" points="0,417.7 303,519.3 0,629.3 	"/>
+	<polygon fill="#8A8C8E" points="303,519.3 402.2,717.7 0,980 	"/>
+	<polygon fill="#808285" points="402.2,717.7 256.7,980 0,980 	"/>
+	<polygon fill="#939598" points="303,519.3 402.2,717.7 626,716 	"/>
+	<polygon fill="#9D9FA2" points="303,519.3 291.2,213.7 0,417.7 	"/>
+	<polygon fill="#8A8C8E" points="0,215.2 291.2,213.7 0,417.7 	"/>
+	<polygon fill="#939598" points="303,519.3 507,292 291.2,213.7 	"/>
+	<polygon fill="#77787B" points="0,0 291.2,213.7 0,215.2 	"/>
+	<polygon fill="#808285" points="291.2,213.7 622.6,127 507,292 	"/>
+	<polygon fill="#6D6E71" points="346.7,0 291.2,213.7 0,0 	"/>
+	<polygon fill="#77787B" points="346.7,0 291.2,213.7 622.6,127 514.7,0 	"/>
+	<polygon fill="#808285" points="514.7,0 622.6,127 898.6,0 	"/>
+	<polygon fill="#6D6E71" points="622.6,127 507,292 750.2,450.7 	"/>
+	<polygon fill="#8A8C8E" points="507,292 626,716 303,519.3 	"/>
+	<polygon fill="#9D9FA2" points="626,716 750.2,450.7 507,292 	"/>
+	<polygon fill="#808285" points="750.2,450.7 626,716 1005,666 	"/>
+	<polygon fill="#9D9FA2" points="626,716 743,980 256.7,980 402.2,717.7 	"/>
+	<polygon fill="#8A8C8E" points="1005,666 743,980 626,716 	"/>
+	<polygon fill="#77787B" points="622.6,127 750.2,450.7 1063,356 	"/>
+	<polygon fill="#939598" points="1005,666 743,980 1245.1,980 	"/>
+	<polygon fill="#636466" points="1063,356 1005,666 750.2,450.7 	"/>
+	<polygon fill="#77787B" points="1063,356 1005,666 1400,362 	"/>
+	<polygon fill="#808285" points="1400,362 1005,666 1400,734 	"/>
+	<polygon fill="#8A8C8E" points="898.6,0 1063,356 622.6,127 	"/>
+	<polygon fill="#636466" points="1400,0 1063,356 1400,362 	"/>
+	<polygon fill="#939598" points="1104.1,0 1063,356 1400,0 	"/>
+	<polygon fill="#8A8C8E" points="1005,666 1400,734 1400,980 1245.1,980 	"/>
+	<polygon fill="#9D9FA2" points="898.6,0 1063,356 1104.1,0 	"/>
+</g>
+</svg>
